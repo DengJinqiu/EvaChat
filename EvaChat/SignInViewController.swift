@@ -25,8 +25,8 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBAction func signOut(sender: AnyObject) {
         print("Sign out")
+        GIDSignIn.sharedInstance().signOut()
         try! FIRAuth.auth()!.signOut()
     }
 
 }
-
